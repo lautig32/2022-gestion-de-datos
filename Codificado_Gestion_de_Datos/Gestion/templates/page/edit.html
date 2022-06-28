@@ -1,0 +1,12 @@
+{% extends 'page/layout.html' %}
+{% block body %}
+    <div class="container text-center">
+        <form method="post">
+            <div class="form-group">
+                {% csrf_token %}
+                {{ form }}
+            </div>
+            <button type="Editar" class="btn btn-secondary">Editar</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'page/layout.html' %}
+{% block body %}
+<div class="container"> 
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Carrera</th>
+            <th scope="col">Accion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div class="container text-center">
+            {% for var_obj_career in obj_career %}
+            <tr>
+                <th scope="row">{{var_obj.id}}</th>
+                <td>{{var_obj_career}}</td>
+                <td><a class="btn btn-danger btn-sm" href="{% url 'delet' var_obj_career.id 'career' %}">Eliminar</a></td>
+                <td><a class="btn btn-primary btn-sm" href="{% url 'edit' var_obj_career.id 'career' %}">Editar</a></td>
+            </tr>
+            {% endfor %}
+        </div>
+        </tbody>
+    </table>
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Localidad</th>
+            <th scope="col">Accion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div class="container text-center">
+            {% for var_obj_location in obj_location %}
+            <tr>
+                <th scope="row">{{var_obj_location.id}}</th>
+                <td>{{var_obj_location}}</td>
+                <td><a class="btn btn-danger btn-sm" href="{% url 'delet' var_obj_location.id 'location' %}">Eliminar</a></td>
+                <td><a class="btn btn-primary btn-sm" href="{% url 'edit' var_obj_location.id 'location' %}">Editar</a></td>
+            </tr>
+            {% endfor %}
+        </div>
+        </tbody>
+    </table>
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Profesor</th>
+            <th scope="col">Accion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div class="container text-center">
+            {% for var_obj_teacher in obj_teacher %}    
+            <tr>
+                <th scope="row">{{var_obj_teacher.id}}</th>
+                <td>{{var_obj_teacher}}</td>
+                <td><a class="btn btn-danger btn-sm" href="{% url 'delet' var_obj_teacher.id 'teacher' %}">Eliminar</a></td>
+                <td><a class="btn btn-primary btn-sm" href="{% url 'edit' var_obj_teacher.id 'teacher' %}">Editar</a></td>
+            </tr>
+            {% endfor %}
+        </div>
+        </tbody>
+    </table>
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Materia</th>
+            <th scope="col">Accion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div class="container text-center">
+            {% for var_obj_matter in obj_matter %}
+            <tr>
+                <th scope="row">{{var_obj_matter.id}}</th>
+                <td>{{var_obj_matter}}</td>
+                <td><a class="btn btn-danger btn-sm" href="{% url 'delet' var_obj_matter.id 'matter' %}">Eliminar</a></td>
+                <td><a class="btn btn-primary btn-sm" href="{% url 'edit' var_obj_matter.id 'matter' %}">Editar</a></td>
+            </tr>
+            {% endfor %}
+        </div>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'page/layout.html' %}
+{% block body %}
+    <div class="container text-center">
+        <h1>Consulta</h1>
+        <h5>{{texto}}</h3>
+        {% for var in names %}
+            <li><tr>|
+                {% for variamos in var %}
+                    <td> {{variamos}} |</td>
+                {% endfor %}
+            </tr></li>
+        {% endfor %}
+    </div>
+{% endblock %}

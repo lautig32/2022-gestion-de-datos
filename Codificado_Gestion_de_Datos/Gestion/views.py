@@ -9,7 +9,7 @@ def home(request):
     obj_teacher = Teacher.objects.all()
     obj_matter = Matter.objects.all()
     context = {'obj_career': obj_career, 'obj_location': obj_location, 'obj_teacher': obj_teacher, 'obj_matter': obj_matter}
-    return render(request, 'page/home.html', context)
+    return render(request, 'gestion/home.html', context)
 
 def add(request, select_form):
     if select_form == "career":
@@ -45,7 +45,7 @@ def add(request, select_form):
         else:
             form = MatterForm()
     context = {'form' : form}
-    return render(request, 'page/add.html', context)
+    return render(request, 'gestion/add.html', context)
 
 def delet(request, id_class, select_class):
     if select_class == 'career':
@@ -100,7 +100,7 @@ def edit(request, id_class , select_class):
         else:
             form = MatterForm(instance=var_obj)
     context = {'form': form} 
-    return render(request, "page/edit.html", context)
+    return render(request, "gestion/edit.html", context)
 
 def consult_dev(request, select_consult):
     if select_consult == 'a':
@@ -146,4 +146,4 @@ def consult_dev(request, select_consult):
         names = [row for row in cursor.fetchall()]
         db.close()
     context = {'names' : names, 'texto' : text}
-    return render(request, 'page/consult_dev.html', context)
+    return render(request, 'gestion/consult_dev.html', context)

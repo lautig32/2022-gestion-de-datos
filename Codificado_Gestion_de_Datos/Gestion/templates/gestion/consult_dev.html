@@ -1,4 +1,8 @@
-{% extends 'page/layout.html' %}
+{% extends 'gestion/layout.html' %}
+{% load static %}
+{% block headLinks %}
+    <link rel="stylesheet" href="{% static 'gestion/css/home.css' %}">
+{% endblock %}
 {% block body %}
     <div class="container text-center">
         <h1>Consulta</h1>

@@ -1,0 +1,17 @@
+{% extends 'gestion/layout.html' %}
+{% load static %}
+{% block headLinks %}
+    <link rel="stylesheet" href="{% static 'gestion/css/add.css' %}">
+{% endblock %}
+{% block body %}
+    <div class="container text-center">
+        <h1>Formulario</h1>
+        <form method="post">
+            <div class="form-group">
+                {% csrf_token %}
+                {{ form }}
+            </div>
+            <button type="Agregar" class="btn btn-primary">Agregar</button>
+        </form>
+    </div>
+{% endblock %}

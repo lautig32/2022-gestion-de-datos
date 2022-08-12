@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div>
+        <a class="navbar-brand">Navegador</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="{% url 'home' %}">Inicio<span class="sr-only">(current)</span></a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
+                      role="button" data-toggle="dropdown" aria-expanded="false">Agregar</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'add' 'career' %}">Carrera</a>
+                    <a class="dropdown-item" href="{% url 'add' 'location' %}">Localidad</a>
+                    <a class="dropdown-item" href="{% url 'add' 'teacher' %}">Profesor</a>
+                    <a class="dropdown-item" href="{% url 'add' 'matter' %}">Materia</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
+                      role="button" data-toggle="dropdown" aria-expanded="false">Consulta</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'consult' 'a' %}">A</a>
+                    <a class="dropdown-item" href="{% url 'consult' 'b' %}">B</a>
+                    <a class="dropdown-item" href="{% url 'consult' 'c' %}">C</a>
+                    <a class="dropdown-item" href="{% url 'consult' 'd' %}">D</a>
+                    <a class="dropdown-item" href="{% url 'consult' 'e' %}">E</a>
+                    <a class="dropdown-item" href="{% url 'consult' 'f' %}">F</a>
+                  </div>
+                </li>
+            </div>
+        </div>
+    </div>
+</nav>
